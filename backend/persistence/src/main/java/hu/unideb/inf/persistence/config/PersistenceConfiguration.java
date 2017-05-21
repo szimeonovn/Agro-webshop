@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.persistence.Entity;
 
-@Configuration //config osztályok javaban
-@EntityScan(basePackages = "hu.unideb.inf.persistence.entity") //hol keresse az entityket, mely pkg alatt
-@EnableJpaRepositories(basePackages = "hu.unideb.inf.persistence.repository") //repokat hol keresse
+@Configuration
+@EntityScan(basePackages = "hu.unideb.inf.persistence.entity")
+@EnableJpaRepositories(basePackages = "hu.unideb.inf.persistence.repository")
 public class PersistenceConfiguration {
 }

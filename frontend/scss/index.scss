@@ -152,16 +152,6 @@ nav{
   padding: 0px;
 }
 
-nav > li {
-  float: right;
-  text-decoration: none;
-  list-style-type: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  font-family: Arial;
-  font-weight:bold;
-}
 nav > a{
   margin-top:0;
   padding-bottom: 20px;
@@ -174,14 +164,29 @@ a:active{
   text-decoration: none;
 }
 
-nav > li > a {
+.modal-content {
+  background-color:white;
+}
 
-  text-decoration: none;
+form{
+
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
   cursor: pointer;
-
+  width: 100%;
 }
-
-nav > li > a:hover {
-  text-decoration: none;
-}
-

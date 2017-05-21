@@ -1,9 +1,14 @@
 (function () {
+    angular.module('webshopModule')
+        .service('api', function ($http, $window) {
+            var urlBase = 'http://localhost:8080';
 
-        function apiService($http, $window) {
+            if ($window.urlBase) {
+                urlBase = $window.urlBase;
+            }
 
-        }
-
-        angular.module('webshopModule').service('api', apiService);
-    }
-)();
+            this.registration = function (user) {
+                return $http.post(urlBase + "/register", user);
+            };
+        });
+})();

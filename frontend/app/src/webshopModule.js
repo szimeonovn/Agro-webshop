@@ -1,3 +1,3 @@
 (function () {
-    angular.module("webshopModule",['ngRoute']);
+    angular.module('webshopModule',['ngRoute']);
 })();
