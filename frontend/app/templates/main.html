@@ -1,0 +1,25 @@
+<div id="product-list" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4" ng-repeat="product in products">
+            <div class="panel panel-success">
+                <div class="panel-heading"><h4>{{product.title}}</h4>
+
+                </div>
+                <div class="panel-body">
+                    <div style="text-align: center">
+                        <a href="#/product/{{product.id}}">
+                            <img id="productImage" ng-src="./css/img/kep{{(product.id - 1) % 10}}.jpg">
+                        </a>
+                    </div>
+
+                    <p class="description">{{product.description}}</p>
+                    <div class="additional-info">
+                        <span class="price-label">{{product.price | currency}}</span>
+                        <button type="button" class="btn btn-danger">Order</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

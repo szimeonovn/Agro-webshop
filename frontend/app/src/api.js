@@ -10,5 +10,10 @@
             this.registration = function (user) {
                 return $http.post(urlBase + "/register", user);
             };
+
+            this.getProducts = function () {
+                return $http.get(urlBase + '/product');
+            };
+
         });
 })();
