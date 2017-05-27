@@ -8,9 +8,11 @@ Agrowebshop is a simple open source webshop application using Spring Boot and An
 
 #### From command line
 
-Dowload the project `$ git clone https://github.com/szimeonovn/Agro-webshop.git`.
+`$ git clone https://github.com/szimeonovn/Agro-webshop.git` 
 
-Run `$ mvn clean install && mvn -pl web spring-boot:run` from the root directory of the backend. 
+`$ mvn clean install && mvn -pl web spring-boot:run` (From the root directory of the app.)
 
+#### In browser
 
+`$ http://localhost:8080/agrowebshop`
 
