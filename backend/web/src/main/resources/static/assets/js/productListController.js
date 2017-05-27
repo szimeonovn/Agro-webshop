@@ -5,5 +5,16 @@
                 .then(function (response) {
                     $scope.products = response.data;
                 });
-        })
+
+            $scope.propertyName = null;
+            $scope.reverse = false;
+
+            $scope.sortBy = function (propertyName) {
+                $scope.activeSort = propertyName;
+                $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+                $scope.propertyName = propertyName;
+            };
+        });
+
+
 })();

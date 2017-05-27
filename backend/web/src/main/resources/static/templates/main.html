@@ -34,11 +34,39 @@
 
 
 </div>
+<div class="container-fluid">
+    <div>
+        <div class="col-sm-4">
+            <input type="text" id="searchInput" class="form-control" ng-model="searchText.title"
+                   placeholder="Search for...">
+            <button class="btn btn-primary" type="button">Search</button>
 
+        </div>
+    </div>
+    <div id="sortBy" class="col-md-8 col-sm-8 col-xs-12">
+        <b>Sort by:</b>
+
+        <div class="btn-group">
+            <button class="btn btn-default" ng-class="{'btn-primary': activeSort=='name'}"
+                    ng-click="sortBy('name')">Name <span class="sortorder glyphicon"
+                                                         ng-show="propertyName === 'name'"
+                                                         ng-class="{reverse: reverse}"></span>
+            </button>
+
+            <button class="btn btn-default" ng-class="{'btn-primary': activeSort=='price'}"
+                    ng-click="sortBy('price')">Price <span
+                    class="sortorder glyphicon"
+                    ng-show="propertyName === 'price'"
+                    ng-class="{reverse: reverse}"></span>
+            </button>
+        </div>
+    </div>
+</div>
 
 <div id="product-list" class="container-fluid">
     <div class="row">
-        <div class="col-sm-4" ng-repeat="product in products">
+        <div class="col-sm-4"
+             ng-repeat="product in products || products | orderBy: propertyName : reverse | filter: searchText:name">
             <div class="panel panel-success">
                 <div class="panel-heading"><h4>{{product.title}}</h4>
 
@@ -50,11 +78,12 @@
                         </a>
                     </div>
 
-                    <p class="description">{{product.description}}</p>
                     <div class="additional-info">
+                        <p class="description">{{product.description}}</p>
                         <span class="price-label">{{product.price | currency}}</span>
                         <button type="button" class="btn btn-danger">Order</button>
                     </div>
+
                 </div>
             </div>
         </div>

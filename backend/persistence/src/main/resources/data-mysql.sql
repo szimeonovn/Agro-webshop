@@ -5,19 +5,22 @@ INSERT INTO user (id, firstname, lastname, email, address, password)
 VALUES (2, 'Masodik', 'Bela', 'masodikbela@gmail.com', 'Lakcimutca2', 'pelda2');
 
 INSERT INTO product (id, title, description, price)
-VALUES (1, 'Traktor', 'Traktor1', 100);
+VALUES (1, 'Tractor1', 'This is the best product for you.', 200000);
 
 INSERT INTO product (id, title, description, price)
-VALUES (2, 'Zetor', 'Zetor2', 200);
+VALUES (2, 'Tractor2', 'This is the best product for you.', 200000);
 
 INSERT INTO product (id, title, description, price)
-VALUES (3, 'Ekekapa', 'Ekekapa3', 300);
+VALUES (3, 'Tractor3', 'This is the best product for you.', 100000);
 
 INSERT INTO product (id, title, description, price)
-VALUES (4, 'Kombajn', 'Kombajn4', 400);
+VALUES (4, 'Harvester1', 'This is the best product for you.', 300000);
 
 INSERT INTO product (id, title, description, price)
-VALUES (5, 'Kapa', 'Kapa5', 500);
+VALUES (5, 'Harvester2', 'This is the best product for you.', 400000);
+
+INSERT INTO product (id, title, description, price)
+VALUES (6, 'Harvester3', 'This is the best product for you.', 500000);
 
 
 
