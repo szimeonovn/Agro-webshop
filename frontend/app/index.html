@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Agro webshop</title>
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/index.css" rel="stylesheet">
@@ -107,7 +108,7 @@
                             <h4 class="modal-title">Sign In</h4>
                         </div>
                         <div class="modal-body">
-                            <form ng-submit="login(user)">
+                            <form ng-submit="login(user.email, user.password)">
                                 <div class="container">
 
                                     <label><b>Email</b></label>
@@ -216,16 +217,21 @@
     </div>
 </footer>
 
-<script src="../bower_components/jquery/dist/jquery.js"></script>
-<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../bower_components/angular-route/angular-route.js"></script>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
 <script src="src/webshopModule.js"></script>
 <script src="src/routing.js"></script>
 <script src="src/api.js"></script>
 <script src="src/registerController.js"></script>
 <script src="src/productListController.js"></script>
+<script src="src/loginController.js"></script>
 
 </body>
 </html>

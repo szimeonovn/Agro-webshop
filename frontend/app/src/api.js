@@ -15,5 +15,16 @@
                 return $http.get(urlBase + '/product');
             };
 
+            this.login = function (email, password) {
+                console.log("nemtom");
+                return $http.post(urlBase + '/login', {
+                    "user.email": email,
+                    "user.password": password
+                }).then(function (response) {
+                    return response.data.token;
+
+                });
+            };
+
         });
 })();
