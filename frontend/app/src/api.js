@@ -10,5 +10,21 @@
             this.registration = function (user) {
                 return $http.post(urlBase + "/register", user);
             };
+
+            this.getProducts = function () {
+                return $http.get(urlBase + '/product');
+            };
+
+            this.login = function (email, password) {
+                console.log("nemtom");
+                return $http.post(urlBase + '/login', {
+                    "user.email": email,
+                    "user.password": password
+                }).then(function (response) {
+                    return response.data.token;
+
+                });
+            };
+
         });
 })();

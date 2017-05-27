@@ -6,4 +6,6 @@ import hu.unideb.inf.service.domain.User;
 public interface UserService {
 
     void registerUser(User user);
+
+    User findUserByEmail(String email);
 }

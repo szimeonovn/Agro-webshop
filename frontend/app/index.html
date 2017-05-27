@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Agro webshop</title>
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/index.css" rel="stylesheet">
@@ -13,99 +14,132 @@
 
 </head>
 <body ng-app="webshopModule">
-
-<nav class="navbar navbar-default">
-    <a>AgroWebshop</a>
-    <div class="container">
-        <button type="button" class="btn btn-success">Sign Out</button>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#signInModal">Sign In</button>
-        <div class="modal fade" id="signInModal" role="dialog">
-            <div class="modal-dialog">
-
-
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Sign In</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form ng-submit="login(user)">
-                            <div class="container">
-
-                                <label><b>Email</b></label>
-                                <input id="emailField" type="text" placeholder="Enter Email" ng-model="user.email" required>
-
-                                <label><b>Password</b></label>
-                                <input id="pwdField" type="password" placeholder="Enter Password" ng-model="user.password" required>
-
-                                <div class="clearfix">
-                                    <button type="submit" class="btn btn-primary">Sign in</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-
-            </div>
+<nav class="navbar navbar-inverse" style=" margin-bottom: 0px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="logo" style="font-family:'Rancho', cursive; font-size: xx-large" href="#">AgroWebshop</a>
         </div>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">Sign Up
-        </button>
-        <div class="modal fade" id="signUpModal" role="dialog" ng-controller="registerCtrl">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Sign Up</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form ng-submit="register(user)">
-                            <div class="container">
+        <ul class="nav navbar-nav">
 
-                                <label><b>Firstname</b></label>
-                                <input type="text" placeholder="Enter Firstname" ng-model="user.firstname" required>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" data-toggle="modal" data-target="#signUpModal"><span
+                    class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 
-                                <label><b>Lastname</b></label>
-                                <input type="text" placeholder="Enter Lastname" ng-model="user.lastname" required>
+            <div class="modal fade" id="signUpModal" role="dialog" ng-controller="registerCtrl">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Sign Up</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form name="regForm" ng-submit="register(user)">
+                                <div class="container">
 
-                                <label><b>Address</b></label>
-                                <input type="text" placeholder="Enter Address" ng-model="user.address" required>
+                                        <label>Firstname <span ng-show="regForm.firstname.$error.required">*</span>
+                                        </label>
+                                        <input class="form-control" type="text" placeholder="Enter Firstname" ng-model="user.firstname"
+                                               ng-minlength="2"
+                                               name="firstname" required>
 
-                                <label><b>Email</b></label>
-                                <input type="text" placeholder="Enter Email" ng-model="user.email" required>
 
-                                <label><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" ng-model="user.password" required>
+                                    <label>Lastname <span ng-show="regForm.lastname.$error.required">*</span></label>
+                                    <input class="form-control" type="text" placeholder="Enter Lastname" ng-model="user.lastname"
+                                           ng-minlength="2"
+                                           name="lastname"
+                                           required>
 
-                                <label><b>Password confirmation</b></label>
-                                <input type="password" placeholder="Enter Password confirmation"
-                                       ng-model="user.passwordConfirmation" required>
 
-                                <p>By creating an account you agree to our Terms & Privacy.</p>
+                                    <label>Address <span ng-show="regForm.address.$error.required">*</span></label>
+                                    <input class="form-control" type="text" placeholder="Enter Address" ng-model="user.address"
+                                           ng-minlength="1"
+                                           name="address" required>
 
-                                <div class="clearfix">
-                                    <button type="submit" class="btn btn-primary">Sign Up</button>
 
-                                    <button type="button" class="btn btn-danger">Cancel</button>
+                                    <label>Email <span ng-show="regForm.email.$error.required">*</span></label>
+                                    <input class="form-control" type="email" placeholder="Enter Email" ng-model="user.email" name="email"
+                                           required>
+
+
+                                    <label>Password <span ng-show="regForm.password.$error.required">*</span></label>
+                                    <input class="form-control" type="password" placeholder="Enter Password (at least 8 characters)"
+                                           ng-minlength="8"
+                                           ng-model="user.password"
+                                           name="password"
+                                           required>
+
+
+                                    <label>Password confirmation</label>
+                                    <span class="error" ng-show="regForm.password.value != regForm.passwordConfirmation.value">löfasz</span>
+                                    <input class="form-control" type="password" placeholder="Confirm Your Password (at least 8 characters)"
+                                           ng-minlength="8"
+                                           ng-model="user.passwordConfirmation" name="passwordConfirmation" required>
+
+
+                                    <p>By creating an account you agree to our Terms & Privacy.</p>
+                                    <span class="error" ng-show="regForm.email.$error.email">Not valid email!</span>
+                                    <div class="clearfix">
+                                        <button type="submit" ng-disabled="regForm.email.$error.email" class="btn btn-primary">Sign Up
+                                        </button>
+
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
 
+                </div>
             </div>
-        </div>
+
+            <li><a href="#" data-toggle="modal" data-target="#signInModal"><span
+                    class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+            <div class="modal fade" id="signInModal" role="dialog">
+                <div class="modal-dialog">
+
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Sign In</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form ng-submit="login(user.email, user.password)">
+                                <div class="container">
+
+                                    <label><b>Email</b></label>
+                                    <input id="emailField" type="text" placeholder="Enter Email" ng-model="user.email"
+                                           required>
+
+                                    <label><b>Password</b></label>
+                                    <input id="pwdField" type="password" placeholder="Enter Password"
+                                           ng-model="user.password" required>
+
+                                    <div class="clearfix">
+                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <li><a href="#"><span
+                    class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+
+        </ul>
     </div>
-
 </nav>
 
-
-<div class="container">
+<div class="container" id="carousel">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
         <ol class="carousel-indicators">
@@ -121,7 +155,7 @@
             </div>
 
             <div class="item">
-                <img src="slide5.jpg">
+                <img src="slide3.jpg">
             </div>
 
             <div class="item">
@@ -138,9 +172,9 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
+
 </div>
-
-
 <ng-view></ng-view>
 
 
@@ -183,15 +217,21 @@
     </div>
 </footer>
 
-<script src="../bower_components/jquery/dist/jquery.js"></script>
-<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../bower_components/angular-route/angular-route.js"></script>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
 <script src="src/webshopModule.js"></script>
 <script src="src/routing.js"></script>
 <script src="src/api.js"></script>
 <script src="src/registerController.js"></script>
+<script src="src/productListController.js"></script>
+<script src="src/loginController.js"></script>
 
 </body>
 </html>

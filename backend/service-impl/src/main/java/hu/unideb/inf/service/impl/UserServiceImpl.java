@@ -42,4 +42,17 @@ public class UserServiceImpl implements UserService {
 
         userRepository.save(modelMapper.map(user, UserEntity.class));
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public User findUserByEmail(String email) {
+        Assert.notNull(email, "Email can not be null");
+        UserEntity userEntity = userRepository.findByEmail(email);
+        if (userEntity != null) {
+            return modelMapper.map(userEntity, User.class);
+        }
+        return null;
+    }
+
+
 }
