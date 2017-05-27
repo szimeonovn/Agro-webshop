@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import(ServiceConfiguration.class)
-@ComponentScan(basePackages = {"hu.unideb.inf.web.rest", "hu.unideb.inf.web.creator", "hu.unideb.inf.web.security"})
+@ComponentScan(basePackages = {"hu.unideb.inf.web.rest", "hu.unideb.inf.web.creator",
+"hu.unideb.inf.web.*"})
 public class WebConfiguration {
 }

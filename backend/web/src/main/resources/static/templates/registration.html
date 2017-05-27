@@ -1,0 +1,68 @@
+<div id="signUpModal" role="dialog">
+    <div>
+        <div>
+            <div>
+                <button type="button" class="close">&times;</button>
+                <h4>Sign Up</h4>
+            </div>
+            <div>
+                <form name="regForm" ng-submit="register(user)">
+                    <div class="container">
+
+                        <label>Firstname <span ng-show="regForm.firstname.$error.required">*</span>
+                        </label>
+                        <input class="form-control" type="text" placeholder="Enter Firstname" ng-model="user.firstname"
+                               ng-minlength="2"
+                               name="firstname" required>
+
+
+                        <label>Lastname <span ng-show="regForm.lastname.$error.required">*</span></label>
+                        <input class="form-control" type="text" placeholder="Enter Lastname" ng-model="user.lastname"
+                               ng-minlength="2"
+                               name="lastname"
+                               required>
+
+
+                        <label>Address <span ng-show="regForm.address.$error.required">*</span></label>
+                        <input class="form-control" type="text" placeholder="Enter Address" ng-model="user.address"
+                               ng-minlength="1"
+                               name="address" required>
+
+
+                        <label>Email <span ng-show="regForm.email.$error.required">*</span></label>
+                        <input class="form-control" type="email" placeholder="Enter Email" ng-model="user.email"
+                               name="email"
+                               required>
+
+
+                        <label>Password <span ng-show="regForm.password.$error.required">*</span></label>
+                        <input class="form-control" type="password" placeholder="Enter Password (at least 8 characters)"
+                               ng-minlength="8"
+                               ng-model="user.password"
+                               name="password"
+                               required>
+
+
+                        <label>Password confirmation</label>
+                        <input class="form-control" type="password"
+                               placeholder="Confirm Your Password (at least 8 characters)"
+                               ng-minlength="8"
+                               ng-model="user.passwordConfirmation" name="passwordConfirmation" required>
+
+
+                        <p>By creating an account you agree to our Terms & Privacy.</p>
+                        <span class="error" ng-show="regForm.email.$error.email">Not valid email!</span>
+                        <div class="clearfix">
+                            <button type="submit" ng-disabled="regForm.email.$error.email" class="btn btn-primary">Sign
+                                Up
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</div>
