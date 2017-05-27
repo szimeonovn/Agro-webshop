@@ -1,0 +1,25 @@
+<div id="signInModal" role="dialog">
+
+    <div>
+        <h4>Sign In</h4>
+    </div>
+    <div>
+        <form ng-submit="login(user)">
+            <div class="container">
+
+                <label><b>Email</b></label>
+                <input id="emailField" type="text" placeholder="Enter Email" ng-model="user.email"
+                       required>
+
+                <label><b>Password</b></label>
+                <input id="pwdField" type="password" placeholder="Enter Password"
+                       ng-model="user.password" required>
+
+                <div class="clearfix">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agro webshop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="assets/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Rancho">
+
+
+</head>
+<body ng-app="webshopModule">
+<nav class="navbar navbar-inverse" style=" margin-bottom: 0px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="logo" style="font-family:'Rancho', cursive; font-size: xx-large" href="#/">AgroWebshop</a>
+        </div>
+        <ul class="nav navbar-nav">
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#registration"><span
+                    class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+
+            <li><a href="#login"><span
+                    class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+            <li><a href="#"><span
+                    class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<ng-view></ng-view>
+
+<footer class="footer-distributed">
+    <div class="container">
+        <div class="footer-left">
+            <p class="footer-links">
+                <a href="#/">Home</a> ·
+                <a href="#/">Shipping</a> ·
+                <a href="#/">About</a> ·
+                <a href="#/">Contact</a> ·
+                <a href="#/">Feedback</a>
+            </p>
+            <p class="footer-project-name">AgroWebshop © 2017</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Debrecen, Hungary</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+12 3456 789</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:agrowebshop@agrowebshop.hu">agrowebshop@agrowebshop.hu</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-project-about">
+                <span>About our webshop</span>
+                We offer maximum flexibility and the highest quality.
+            </p>
+            <div class="footer-icons">
+                <a><i class="fa fa-facebook"></i></a>
+                <a><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/jquery/dist/jquery.js"></script>
+<script src="assets/jquery/dist/jquery.min.js"></script>
+<script src="assets/angular/angular.js"></script>
+<script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/angular-route/angular-route.js"></script>
+<script src="assets/js/webshopModule.js"></script>
+<script src="assets/js/routing.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/registerController.js"></script>
+<script src="assets/js/loginController.js"></script>
+<script src="assets/js/productListController.js"></script>
+
+</body>
+</html>
