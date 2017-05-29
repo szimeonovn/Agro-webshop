@@ -1,10 +1,13 @@
 (function () {
     angular.module('webshopModule')
-        .controller('registrationCtrl', function (api, $scope) {
+        .controller('registrationCtrl', function (api, $scope, $location, growl) {
             $scope.register = function (user) {
                 api.registration(user)
                     .then(function () {
-                        $('#signUpModal').modal('hide');
+                        growl.success("Successful Registration!");
+                        $location.path("/login");
+                    }, function () {
+                        growl.error("Registration Failure!");
                     });
             };
 

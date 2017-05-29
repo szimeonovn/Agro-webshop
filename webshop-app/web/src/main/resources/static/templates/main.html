@@ -47,17 +47,12 @@
         <b>Sort by:</b>
 
         <div class="btn-group">
-            <button class="btn btn-default" ng-class="{'btn-primary': activeSort=='name'}"
-                    ng-click="sortBy('name')">Name <span class="sortorder glyphicon"
-                                                         ng-show="propertyName === 'name'"
-                                                         ng-class="{reverse: reverse}"></span>
+            <button class="btn btn-default" ng-class="{'btn-primary': activeSort=='title'}"
+                    ng-click="sortBy('title')">Name
             </button>
 
             <button class="btn btn-default" ng-class="{'btn-primary': activeSort=='price'}"
-                    ng-click="sortBy('price')">Price <span
-                    class="sortorder glyphicon"
-                    ng-show="propertyName === 'price'"
-                    ng-class="{reverse: reverse}"></span>
+                    ng-click="sortBy('price')">Price
             </button>
         </div>
     </div>
@@ -81,7 +76,7 @@
                     <div class="additional-info">
                         <p class="description">{{product.description}}</p>
                         <span class="price-label">{{product.price | currency}}</span>
-                        <button type="button" class="btn btn-danger">Order</button>
+                        <button type="button" ng-click="order(product.title)" class="btn btn-danger">Order</button>
                     </div>
 
                 </div>

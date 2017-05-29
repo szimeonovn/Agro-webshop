@@ -1,8 +1,8 @@
 INSERT INTO user (id, firstname, lastname, email, address, password)
-VALUES (1, 'Elso', 'Bela', 'elsobela@gmail.com', 'Lakcimutca1', 'pelda1');
+VALUES (1, 'Elso', 'Bela', 'elsobela@gmail.com', 'Lakcimutca1', '$2a$06$silElDO2OOVttK4Nta8XEeFFS05PA6RBOkf82J.JpUADKjLBCFoTi');
 
 INSERT INTO user (id, firstname, lastname, email, address, password)
-VALUES (2, 'Masodik', 'Bela', 'masodikbela@gmail.com', 'Lakcimutca2', 'pelda2');
+VALUES (2, 'Masodik', 'Bela', 'masodikbela@gmail.com', 'Lakcimutca2', '$2a$06$plfTf0NbEGZhC3R9HIr7vOix4AL1jffvm9aJkO7OHzMb9eI2eTO1.');
 
 INSERT INTO product (id, title, description, price)
 VALUES (1, 'Tractor1', 'This is the best product for you.', 200000);

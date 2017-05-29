@@ -7,11 +7,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="assets/css/index.css" rel="stylesheet">
+    <link href="assets/angular-growl/angular-growl.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Rancho">
 
 
 </head>
 <body ng-app="webshopModule">
+<div growl></div>
 <nav class="navbar navbar-inverse" style=" margin-bottom: 0px;">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -27,7 +29,7 @@
             <li><a href="#login"><span
                     class="glyphicon glyphicon-log-in"></span> Login</a></li>
 
-            <li><a href="#"><span
+            <li><a href="appLogout"><span
                     class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
 
         </ul>
@@ -86,6 +88,7 @@
 <script src="assets/js/registerController.js"></script>
 <script src="assets/js/loginController.js"></script>
 <script src="assets/js/productListController.js"></script>
+<script src="assets/angular-growl/angular-growl.js"></script>
 
 </body>
 </html>

@@ -30,7 +30,9 @@
 
 
                         <label>Email <span ng-show="regForm.email.$error.required">*</span></label>
-                        <input class="form-control" type="email" placeholder="Enter Email" ng-model="user.email"
+                        <input class="form-control"
+                               ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/"
+                               type="email" placeholder="Enter Email" ng-model="user.email"
                                name="email"
                                required>
 
@@ -51,9 +53,11 @@
 
 
                         <p>By creating an account you agree to our Terms & Privacy.</p>
-                        <span class="error" ng-show="regForm.email.$error.email">Not valid email!</span>
+
+                        <span ng-if="regForm.$error.email">Not a valid email!</span><br>
+
                         <div class="clearfix">
-                            <button type="submit" ng-disabled="regForm.email.$error.email" class="btn btn-primary">Sign
+                            <button type="submit" ng-disabled="regForm.$error.email" class="btn btn-primary">Sign
                                 Up
                             </button>
 

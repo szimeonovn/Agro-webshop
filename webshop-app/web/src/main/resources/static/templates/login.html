@@ -3,21 +3,34 @@
         <div>
             <h4>Sign In</h4>
         </div>
-        <form ng-submit="login(user)">
+        <form name="loginForm" action="processLogin" method='POST'>
             <div class="container">
 
                 <label><b>Email</b></label>
-                <input class="form-control" name="email" id="emailField" type="text" placeholder="Enter Email"
+                <input class="form-control"
+                       ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" name="email"
+                       type="email" placeholder="Enter Email"
                        ng-model="user.email" ng-minlength="2"
                        required>
 
+
+                <p class="error" ng-show="loginForm.$submitted && loginForm.email.$error.email">This is not a valid
+                    email.</p>
+
                 <label><b>Password</b></label>
-                <input class="form-control" name="password" id="passwordField" type="password"
+                <input class="form-control" name="password" type="password"
                        placeholder="Enter Password" ng-minlength="8"
                        ng-model="user.password" required>
+                <span class="error" ng-show="loginForm.email.$error.email">Not a valid email!</span>
+
+                <p class="error" ng-show="loginForm.$submitted && loginForm.$error.required">All the fields are
+                    required.</p>
+
 
                 <div class="clearfix">
-                    <button style="margin-top:10px" type="submit" class="btn btn-primary">Sign in</button>
+                    <button style="margin-top:10px" type="submit" ng-disabled="loginForm.email.$error.email"
+                            class="btn btn-primary">Sign in
+                    </button>
                 </div>
             </div>
         </form>

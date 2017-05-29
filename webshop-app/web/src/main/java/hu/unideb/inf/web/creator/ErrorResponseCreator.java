@@ -30,7 +30,7 @@ public class ErrorResponseCreator {
         Assert.notNull(bindingResult, "Binding Result can not be null");
         List<ErrorDetails> errorDetailsList = null;
         if (bindingResult.hasErrors()) {
-             errorDetailsList = bindingResult.getAllErrors()
+            errorDetailsList = bindingResult.getAllErrors()
                     .stream()
                     .map(objectError -> createErrorDetails(objectError))
                     .collect(Collectors.toList());

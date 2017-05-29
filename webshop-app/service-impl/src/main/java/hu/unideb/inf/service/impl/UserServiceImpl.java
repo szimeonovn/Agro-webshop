@@ -10,6 +10,7 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
@@ -40,7 +41,11 @@ public class UserServiceImpl implements UserService {
             throw new EmailAlreadyUsedException(String.format("Email=%s already used", user.getEmail()), exceptionDetails);
         }
 
-        userRepository.save(modelMapper.map(user, UserEntity.class));
+        UserEntity userEntity = modelMapper.map(user, UserEntity.class);
+
+        userEntity.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
+
+        userRepository.save(userEntity);
     }
 
     @Override
@@ -56,3 +61,4 @@ public class UserServiceImpl implements UserService {
 
 
 }
+

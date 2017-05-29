@@ -29,6 +29,8 @@ public class RegistrationController {
 
     @PostMapping(path = "/register")
     public ResponseEntity<Object> register(@Valid @RequestBody User user, BindingResult bindingResult) {
+        LOGGER.info("User password: {}", user.getPassword());
+
         LOGGER.info("Received user request : {} ", user);
         if (bindingResult.hasErrors()) {
             ErrorResponse errorResponse = errorResponseCreator.createErrorResponse(bindingResult);

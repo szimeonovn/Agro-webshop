@@ -1,6 +1,6 @@
 (function () {
     angular.module('webshopModule')
-        .service('api', function ($http, $window) {
+        .service('api', function ($rootScope, $http, $window, growl) {
             var urlBase = 'http://localhost:8080/agrowebshop';
 
             if ($window.urlBase) {
@@ -11,13 +11,22 @@
                 return $http.post(urlBase + "/register", user);
             };
 
-            this.login = function (email, password) {
-                return $http.get(urlBase + "/login", {
-                    "email" : email,
-                    "password" : password
-                }).then(function (response) {
-                    return response.data;
-                })
+            this.login = function (user) {
+                return $http.get(urlBase + "/processLogin", {
+                    "email": user.email,
+                    "password": user.password
+                });
+            };
+
+            this.buyIfLoggedIn = function (title) {
+                $http.get(urlBase + "/user").then(
+                    function (response) {
+                        growl.success(response.data.value + " has purchased " + title + " successfully!");
+                    },
+                    function () {
+                        growl.error("You have to be logged in to buy something!");
+                    }
+                )
             };
 
             this.getProducts = function () {
