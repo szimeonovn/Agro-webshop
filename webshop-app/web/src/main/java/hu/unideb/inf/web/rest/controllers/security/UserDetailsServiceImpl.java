@@ -1,9 +1,8 @@
-package hu.unideb.inf.web.security;
+package hu.unideb.inf.web.rest.controllers.security;
 
-import ch.qos.logback.core.CoreConstants;
 import hu.unideb.inf.service.UserService;
 import hu.unideb.inf.service.domain.User;
-import hu.unideb.inf.web.exception.EmailNotFoundException;
+import hu.unideb.inf.web.rest.controllers.exception.EmailNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

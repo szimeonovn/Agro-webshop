@@ -1,4 +1,4 @@
-package hu.unideb.inf.web.rest.response;
+package hu.unideb.inf.web.rest.controllers.rest.response;
 
 public class UserResponse {
     private String key;

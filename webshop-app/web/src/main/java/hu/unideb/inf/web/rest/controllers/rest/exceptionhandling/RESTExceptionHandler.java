@@ -1,9 +1,8 @@
-package hu.unideb.inf.web.rest.exceptionhandling;
+package hu.unideb.inf.web.rest.controllers.rest.exceptionhandling;
 
 import hu.unideb.inf.service.exception.EmailAlreadyUsedException;
-import hu.unideb.inf.web.creator.ErrorResponseCreator;
-import hu.unideb.inf.web.rest.controller.RegistrationController;
-import hu.unideb.inf.web.rest.response.ErrorResponse;
+import hu.unideb.inf.web.rest.controllers.creator.ErrorResponseCreator;
+import hu.unideb.inf.web.rest.controllers.rest.response.ErrorResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

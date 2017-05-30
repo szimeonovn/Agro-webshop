@@ -1,7 +1,6 @@
-package hu.unideb.inf.web.rest.controller;
+package hu.unideb.inf.web.rest.controllers.rest.controller;
 
-import hu.unideb.inf.service.domain.User;
-import hu.unideb.inf.web.rest.response.UserResponse;
+import hu.unideb.inf.web.rest.controllers.rest.response.UserResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

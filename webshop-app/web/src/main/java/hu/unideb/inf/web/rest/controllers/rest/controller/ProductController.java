@@ -1,4 +1,4 @@
-package hu.unideb.inf.web.rest.controller;
+package hu.unideb.inf.web.rest.controllers.rest.controller;
 
 
 import hu.unideb.inf.service.ProductService;
@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class ProductController {
     @Autowired

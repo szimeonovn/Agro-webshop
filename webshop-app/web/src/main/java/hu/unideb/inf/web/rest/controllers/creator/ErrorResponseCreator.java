@@ -1,8 +1,8 @@
-package hu.unideb.inf.web.creator;
+package hu.unideb.inf.web.rest.controllers.creator;
 
 import hu.unideb.inf.service.exception.ExceptionDetails;
-import hu.unideb.inf.web.rest.response.ErrorDetails;
-import hu.unideb.inf.web.rest.response.ErrorResponse;
+import hu.unideb.inf.web.rest.controllers.rest.response.ErrorDetails;
+import hu.unideb.inf.web.rest.controllers.rest.response.ErrorResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

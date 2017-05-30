@@ -1,4 +1,4 @@
-package hu.unideb.inf.web.exception;
+package hu.unideb.inf.web.rest.controllers.exception;
 
 
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

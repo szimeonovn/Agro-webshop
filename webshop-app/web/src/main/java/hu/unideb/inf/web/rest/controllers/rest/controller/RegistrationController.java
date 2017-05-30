@@ -1,9 +1,9 @@
-package hu.unideb.inf.web.rest.controller;
+package hu.unideb.inf.web.rest.controllers.rest.controller;
 
 import hu.unideb.inf.service.UserService;
 import hu.unideb.inf.service.domain.User;
-import hu.unideb.inf.web.creator.ErrorResponseCreator;
-import hu.unideb.inf.web.rest.response.ErrorResponse;
+import hu.unideb.inf.web.rest.controllers.creator.ErrorResponseCreator;
+import hu.unideb.inf.web.rest.controllers.rest.response.ErrorResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class RegistrationController {
 
