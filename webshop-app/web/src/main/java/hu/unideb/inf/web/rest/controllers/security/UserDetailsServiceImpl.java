@@ -12,12 +12,18 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 
+/**
+ * Implementatin of {@link UserDetailsService}.
+ */
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
     private UserService userService;
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {

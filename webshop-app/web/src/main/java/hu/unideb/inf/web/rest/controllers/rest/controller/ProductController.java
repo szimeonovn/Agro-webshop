@@ -11,13 +11,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * This class defines and provides the product related resources.
+ */
 @RestController
 public class ProductController {
     @Autowired
     private ProductService productService;
 
+    /**
+     * Returns the queried products.
+     *
+     * @return an HTTP Status code and a list of the products
+     */
     @GetMapping(path = "/product")
-    public ResponseEntity<List<Product>> getAllProduct(){
+    public ResponseEntity<List<Product>> getAllProduct() {
+
         return ResponseEntity.ok(productService.getAllProduct());
     }
 }

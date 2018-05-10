@@ -5,7 +5,9 @@ import lombok.Data;
 
 import java.util.List;
 
-
+/**
+ * This class wraps the list of the error details.
+ */
 @Data
 @Builder
 public class ErrorResponse {

@@ -11,6 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Implementation of {@link ProductService}.
+ */
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -20,6 +23,9 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     @Transactional(readOnly = true)
     public List<Product> getAllProduct() {

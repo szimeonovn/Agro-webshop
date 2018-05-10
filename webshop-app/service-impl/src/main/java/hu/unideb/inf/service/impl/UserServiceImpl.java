@@ -15,6 +15,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
+/**
+ * Implementation of {@link UserService}.
+ */
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -27,6 +30,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private ModelMapper modelMapper;
 
+    /**
+     * {@inheritDoc}
+     */
     @Transactional
     @Override
     public void registerUser(User user) {
@@ -48,6 +54,9 @@ public class UserServiceImpl implements UserService {
         userRepository.save(userEntity);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     @Transactional(readOnly = true)
     public User findUserByEmail(String email) {

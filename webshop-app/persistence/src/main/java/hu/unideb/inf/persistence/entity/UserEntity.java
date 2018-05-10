@@ -5,6 +5,9 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+/**
+ * This class represents the user related informations.
+ */
 @Builder
 @Entity
 @Table(name = "user")

@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
+/**
+ * This class defines a controller which is responsible for creating the user account.
+ */
 @RestController
 public class RegistrationController {
 
@@ -26,6 +29,13 @@ public class RegistrationController {
     @Autowired
     private ErrorResponseCreator errorResponseCreator;
 
+    /**
+     * This method creates the account with the given data.
+     *
+     * @param user
+     * @param bindingResult the bindingresult
+     * @return a HTTP Status code with in case of an error - an error response object
+     */
     @PostMapping(path = "/register")
     public ResponseEntity<Object> register(@Valid @RequestBody User user, BindingResult bindingResult) {
         LOGGER.info("Received user request : {} ", user);

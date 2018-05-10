@@ -15,17 +15,32 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * This class provides the error response objects.
+ */
 
 @Component
 public class ErrorResponseCreator {
     private static final Logger LOGGER = LoggerFactory.getLogger(ErrorResponse.class);
 
-    public ErrorResponse createErrorResponse(ExceptionDetails exceptionDetails){
+    /**
+     * Returns an error response object.
+     *
+     * @param exceptionDetails It contains the base key value pairs in case of breaking the validation restrictions.
+     * @return an error response object
+     */
+    public ErrorResponse createErrorResponse(ExceptionDetails exceptionDetails) {
         return ErrorResponse.builder().errorDetailsList(Collections.singletonList(
                 ErrorDetails.builder().key(exceptionDetails.getKey()).value(exceptionDetails.getValue()).build()
         )).build();
     }
 
+    /**
+     * Returns an error response object made from the bindingresult.
+     *
+     * @param bindingResult the bindingresult
+     * @return an error response object made from the bindingresult
+     */
     public ErrorResponse createErrorResponse(BindingResult bindingResult) {
         Assert.notNull(bindingResult, "Binding Result can not be null");
         List<ErrorDetails> errorDetailsList = null;

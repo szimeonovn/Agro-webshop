@@ -7,7 +7,9 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
 
-
+/**
+ * This class represents the product item.
+ */
 @Builder
 @Data
 @NoArgsConstructor

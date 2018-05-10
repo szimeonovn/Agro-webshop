@@ -4,6 +4,9 @@ import javax.validation.constraints.NotNull;
 
 import lombok.*;
 
+/**
+ * This class represents the user.
+ */
 @Builder
 @Data
 @NoArgsConstructor
