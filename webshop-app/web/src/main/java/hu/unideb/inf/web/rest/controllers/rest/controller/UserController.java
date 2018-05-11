@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.security.Principal;
 
 /**
- * This class contains the controller which returns the authenticated user's email address.
+ * This controller provides the user account related resources.
  */
+
 @RestController
 public class UserController {
 

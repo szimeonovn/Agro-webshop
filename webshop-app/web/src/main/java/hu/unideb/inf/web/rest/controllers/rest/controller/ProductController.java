@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * This class defines and provides the product related resources.
+ * This controller defines and provides the product related resources.
  */
 @RestController
 public class ProductController {

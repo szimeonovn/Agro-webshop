@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * This class provides the configuration of the module.
+ * This class provides the configuration of the web module.
  */
 @Configuration
 @Import(ServiceConfiguration.class)

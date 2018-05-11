@@ -16,7 +16,7 @@ public interface UserService {
 
     /**
      * This method provides the user object for the given email address.
-     * If there is no matching user object then it returns null.
+     * If there is no matching user object based on email address then it returns null.
      *
      * @param email
      * @return a User object

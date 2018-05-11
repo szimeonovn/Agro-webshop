@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 
 /**
- * This class represents a key value pair.
+ * This class represents a key value pair which contains the reason why the given validation constraint is failed.
  */
 @Data
 @Builder

@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Import;
 public class ServiceConfiguration {
 
     /**
-     * This method registers the Modelmapper into the Spring context.
+     * Creates a new modelMapper instance which will be available for the other components.
      *
      * @return a ModelMapper
      */

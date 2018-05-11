@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
 /**
- * This class provides the start of the application.
+ * This class is responsible for starting the application as a Spring-boot app.
  */
 @SpringBootApplication
 @Import({WebConfiguration.class, WebSecurityConfiguration.class})

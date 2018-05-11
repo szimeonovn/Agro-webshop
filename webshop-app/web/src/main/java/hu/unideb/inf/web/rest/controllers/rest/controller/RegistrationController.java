@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 /**
- * This class defines a controller which is responsible for creating the user account.
+ * This controller is responsible for creating the user account.
  */
 @RestController
 public class RegistrationController {

@@ -11,7 +11,7 @@ public class EmailAlreadyUsedException extends RuntimeException {
     private ExceptionDetails exceptionDetails;
 
     /**
-     * This exception invokes when the email address to save already exist in the database.
+     * Constructor to help creating a new instance of the ${@link EmailAlreadyUsedException}
      *
      * @param message
      * @param exceptionDetails

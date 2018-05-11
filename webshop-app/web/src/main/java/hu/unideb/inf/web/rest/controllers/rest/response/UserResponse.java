@@ -32,9 +32,9 @@ public class UserResponse {
     }
 
     /**
-     * Returns the value of the key.
+     * Returns the key.
      *
-     * @return the set value
+     * @return the key
      */
     public String getValue() {
 
@@ -42,7 +42,7 @@ public class UserResponse {
     }
 
     /**
-     * Sets the parameter value.
+     * Sets the value of the key.
      *
      * @param value sets the value of the key
      */

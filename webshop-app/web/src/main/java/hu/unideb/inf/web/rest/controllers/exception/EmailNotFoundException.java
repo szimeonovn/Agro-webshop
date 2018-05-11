@@ -4,13 +4,12 @@ package hu.unideb.inf.web.rest.controllers.exception;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 /**
- * This class provides the exception that invokes at retrieving an account from the database,
+ * This class provides an exception that invokes at retrieving an account from the database,
  * which has not belong to the given email address.
  */
 public class EmailNotFoundException extends UsernameNotFoundException {
     /**
-     * This exception invokes at retrieving an account from the database,
-     * which has not belong to the given email address.
+     * Constructor that helps to create a new instance of the ${@link EmailNotFoundException }
      *
      * @param message the description of the error message
      */

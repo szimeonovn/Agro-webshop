@@ -42,7 +42,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     /**
      * This method registers the defined user detail service and tells
-     * which implementation should be used for the encoding of the passwords.
+     * which password encoder implemenation is used in the application when the password encoding happens.
      */
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
