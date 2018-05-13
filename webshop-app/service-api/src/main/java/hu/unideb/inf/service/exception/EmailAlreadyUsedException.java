@@ -7,6 +7,8 @@ import lombok.Getter;
  */
 public class EmailAlreadyUsedException extends RuntimeException {
 
+    private static final long serialVersionUID = -2413213075285048591L;
+
     @Getter
     private ExceptionDetails exceptionDetails;
 

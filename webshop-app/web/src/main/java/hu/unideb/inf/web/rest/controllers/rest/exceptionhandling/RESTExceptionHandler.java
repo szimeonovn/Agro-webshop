@@ -23,6 +23,7 @@ public class RESTExceptionHandler {
     @ExceptionHandler(EmailAlreadyUsedException.class)
     protected ResponseEntity<ErrorResponse> handleEmailAlreadyUsedException(final EmailAlreadyUsedException e) {
         LOGGER.error("{}", e.getMessage(), e);
-        return ResponseEntity.badRequest().body(errorResponseCreator.createErrorResponse(e.getExceptionDetails()));
+        return ResponseEntity.badRequest().body(errorResponseCreator
+                .createErrorResponse(e.getExceptionDetails()));
     }
 }

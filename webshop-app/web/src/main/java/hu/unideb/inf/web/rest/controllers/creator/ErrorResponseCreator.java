@@ -18,7 +18,6 @@ import java.util.stream.Collectors;
 /**
  * This class provides the error response objects.
  */
-
 @Component
 public class ErrorResponseCreator {
     private static final Logger LOGGER = LoggerFactory.getLogger(ErrorResponse.class);

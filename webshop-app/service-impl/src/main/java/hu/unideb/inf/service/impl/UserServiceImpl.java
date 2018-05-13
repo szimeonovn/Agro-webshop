@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
      */
     @Transactional
     @Override
-    public void registerUser(User user) {
+    public void registerUser(User user) throws EmailAlreadyUsedException{
         Assert.notNull(user, "User can not be null");
 
         if (userRepository.findByEmail(user.getEmail()) != null) {

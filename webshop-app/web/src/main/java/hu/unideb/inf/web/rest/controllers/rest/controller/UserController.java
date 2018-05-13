@@ -19,7 +19,7 @@ public class UserController {
      * Returns the authenticated user's email address.
      *
      * @param principal the principal
-     * @return a HTTP Status code with the authenticated user"s email
+     * @return a HTTP Status code with the authenticated user's email
      */
     @GetMapping(path = "/user")
     public ResponseEntity<UserResponse> getCurrentUser(Principal principal) {
