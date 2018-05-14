@@ -23,6 +23,7 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Matchers.notNull;
+import static org.mockito.Matchers.startsWith;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 
@@ -55,5 +56,20 @@ public class UserDetailsServiceImplTest {
 
     }
 
+//    @Test(expected = UsernameNotFoundException.class)
+//    public void loadByUserNameShouldThrowUsernameNotFoundException() {
+//        given(UserDetails.class).willReturn(null);
+//        doThrow(UsernameNotFoundException.class).when(userService).findUserByEmail(null);
+//        UserDetails result = controllerUnderTest.loadUserByUsername(usernameNotFoundException.getLocalizedMessage());
+//
+//    }
+
+    @Test(expected = UsernameNotFoundException.class)
+    public void loadByUserNameShouldReturnUserDetail() {
+        given(userService.findUserByEmail(user.getUsername())).willReturn(null);
+        UserDetails result = controllerUnderTest.loadUserByUsername(user.getUsername());
+        assertThat(result, notNullValue());
+
+    }
 
 }

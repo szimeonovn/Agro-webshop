@@ -30,7 +30,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         User user = userService.findUserByEmail(email);
         if (user == null) {
-
             throw new EmailNotFoundException(String.format("Email=%s not found", email));
         }
         return new org.springframework.security.core.userdetails.User(email, user.getPassword(), Collections.emptyList());
