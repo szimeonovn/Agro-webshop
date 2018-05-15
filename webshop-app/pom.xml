@@ -10,7 +10,7 @@
         <version>1.5.6.RELEASE</version>
     </parent>
 
-    <description>Agro webshop is an open source web application for the course "Programozási környezetek".</description>
+    <description>Agro webshop is an open source webshop application.</description>
     <inceptionYear>2018</inceptionYear>
 
     <developers>
@@ -147,12 +147,12 @@
                                             <limit>
                                                 <counter>LINE</counter>
                                                 <value>COVEREDRATIO</value>
-                                                <minimum>0.80</minimum>
+                                                <minimum>0.20</minimum>
                                             </limit>
                                             <limit>
                                                 <counter>BRANCH</counter>
                                                 <value>COVEREDRATIO</value>
-                                                <minimum>0.80</minimum>
+                                                <minimum>0.20</minimum>
                                             </limit>
                                         </limits>
                                         <excludes>
@@ -257,6 +257,11 @@
                         </configuration>
                     </reportSet>
                 </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.19.1</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
