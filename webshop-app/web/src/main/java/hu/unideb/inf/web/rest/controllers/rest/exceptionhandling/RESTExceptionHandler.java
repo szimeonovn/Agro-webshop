@@ -23,7 +23,7 @@ public class RESTExceptionHandler {
     /**
      * This handles the invoked exception when an already saved email address wants to be registered.
      * @param e an exception
-     * @return ResponseEntity<ErrorResponse>
+     * @return ResponseEntity a response entity
      */
     @ExceptionHandler(EmailAlreadyUsedException.class)
     protected ResponseEntity<ErrorResponse> handleEmailAlreadyUsedException(final EmailAlreadyUsedException e) {

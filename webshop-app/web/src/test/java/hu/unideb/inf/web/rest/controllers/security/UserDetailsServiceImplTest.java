@@ -46,7 +46,7 @@ public class UserDetailsServiceImplTest {
 
     @InjectMocks
     private UserDetailsServiceImpl controllerUnderTest;
-    
+
 
     @Test(expected = UsernameNotFoundException.class)
     public void loadByUserNameShouldReturnUserDetail() {
