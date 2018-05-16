@@ -46,23 +46,7 @@ public class UserDetailsServiceImplTest {
 
     @InjectMocks
     private UserDetailsServiceImpl controllerUnderTest;
-
-
-    @Test(expected = EmailNotFoundException.class)
-    public void loadByUserNameShouldThrowEmailNotFoundException() {
-        given(user).willReturn(null);
-        doThrow(EmailNotFoundException.class).when(userService).findUserByEmail(null);
-        UserDetails result = controllerUnderTest.loadUserByUsername(emailNotFoundException.getLocalizedMessage());
-
-    }
-
-//    @Test(expected = UsernameNotFoundException.class)
-//    public void loadByUserNameShouldThrowUsernameNotFoundException() {
-//        given(UserDetails.class).willReturn(null);
-//        doThrow(UsernameNotFoundException.class).when(userService).findUserByEmail(null);
-//        UserDetails result = controllerUnderTest.loadUserByUsername(usernameNotFoundException.getLocalizedMessage());
-//
-//    }
+    
 
     @Test(expected = UsernameNotFoundException.class)
     public void loadByUserNameShouldReturnUserDetail() {

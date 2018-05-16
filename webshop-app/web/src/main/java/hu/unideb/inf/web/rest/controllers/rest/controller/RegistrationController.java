@@ -31,7 +31,7 @@ public class RegistrationController {
     /**
      * This method creates the account with the given data.
      *
-     * @param user
+     * @param user          the user
      * @param bindingResult the bindingresult
      * @return a HTTP Status code with in case of an error - an error response object
      */

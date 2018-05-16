@@ -8,6 +8,12 @@ public class UserResponse {
     private String key;
     private String value;
 
+    /**
+     * Represents a key value pair.
+     *
+     * @param key   the key
+     * @param value the value
+     */
     public UserResponse(String key, String value) {
         this.key = key;
         this.value = value;

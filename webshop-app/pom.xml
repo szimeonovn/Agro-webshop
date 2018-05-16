@@ -157,9 +157,13 @@
                                         </limits>
                                         <excludes>
                                             <exclude>hu.unideb.inf.service.config.ServiceConfiguration</exclude>
-                                            <exclude>hu.unideb.inf.web.rest.controllers.security.WebSecurityConfiguration</exclude>
+                                            <exclude>
+                                                hu.unideb.inf.web.rest.controllers.security.WebSecurityConfiguration
+                                            </exclude>
                                             <exclude>hu.unideb.inf.web.rest.controllers.config.*</exclude>
-                                            <exclude>hu.unideb.inf.web.rest.controllers.exception.EmailNotFoundException</exclude>
+                                            <exclude>
+                                                hu.unideb.inf.web.rest.controllers.exception.EmailNotFoundException
+                                            </exclude>
                                             <exclude>hu.unideb.inf.web.rest.controllers.rest.response.*</exclude>
                                         </excludes>
                                     </rule>
@@ -203,6 +207,7 @@
                             <artifactId>checkstyle</artifactId>
                             <version>8.3</version>
                         </dependency>
+
                     </dependencies>
                 </plugin>
             </plugins>
@@ -219,10 +224,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
  */
 public class EmailNotFoundException extends UsernameNotFoundException {
     /**
-     * Constructor that helps to create a new instance of the ${@link EmailNotFoundException }
+     * Constructor that helps to create a new instance of the ${@link EmailNotFoundException }.
      *
      * @param message the description of the error message
      */

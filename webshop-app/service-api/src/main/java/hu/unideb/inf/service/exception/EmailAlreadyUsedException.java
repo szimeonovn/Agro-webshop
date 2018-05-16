@@ -13,10 +13,10 @@ public class EmailAlreadyUsedException extends RuntimeException {
     private ExceptionDetails exceptionDetails;
 
     /**
-     * Constructor to help creating a new instance of the ${@link EmailAlreadyUsedException}
+     * Constructor to help creating a new instance of the ${@link EmailAlreadyUsedException}.
      *
-     * @param message
-     * @param exceptionDetails
+     * @param message          the message
+     * @param exceptionDetails the exception details
      */
     public EmailAlreadyUsedException(String message, ExceptionDetails exceptionDetails) {
         super(message);

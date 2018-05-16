@@ -20,6 +20,11 @@ public class RESTExceptionHandler {
     @Autowired
     private ErrorResponseCreator errorResponseCreator;
 
+    /**
+     * This handles the invoked exception when an already saved email address wants to be registered.
+     * @param e an exception
+     * @return ResponseEntity<ErrorResponse>
+     */
     @ExceptionHandler(EmailAlreadyUsedException.class)
     protected ResponseEntity<ErrorResponse> handleEmailAlreadyUsedException(final EmailAlreadyUsedException e) {
         LOGGER.error("{}", e.getMessage(), e);
